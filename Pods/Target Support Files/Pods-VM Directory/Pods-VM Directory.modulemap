@@ -1,0 +1,6 @@
+framework module Pods_VM_Directory {
+  umbrella header "Pods-VM Directory-umbrella.h"
+
+  export *
+  module * { export * }
+}

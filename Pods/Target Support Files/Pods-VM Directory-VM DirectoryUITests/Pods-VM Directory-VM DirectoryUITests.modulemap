@@ -1,0 +1,6 @@
+framework module Pods_VM_Directory_VM_DirectoryUITests {
+  umbrella header "Pods-VM Directory-VM DirectoryUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
