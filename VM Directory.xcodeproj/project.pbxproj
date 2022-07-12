@@ -139,7 +139,6 @@
 				0ACDEB9B287A8302008CBB0C /* Storyboards */,
 				0ACDEB96287A82CF008CBB0C /* Controllers */,
 				0ACDEBA0287A8630008CBB0C /* Views */,
-				0ACDEBA5287A87A3008CBB0C /* ViewModel */,
 				0ACDEB93287A82B2008CBB0C /* Webservice */,
 				0ACDEB9F287A83A8008CBB0C /* Models */,
 				0ACDEB60287A8274008CBB0C /* AppDelegate.swift */,
@@ -213,13 +212,6 @@
 				0ACDEBA3287A872B008CBB0C /* VMRoomsListTCell.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		0ACDEBA5287A87A3008CBB0C /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		38825398252B5FF21801F07D /* Frameworks */ = {

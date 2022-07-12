@@ -137,7 +137,6 @@ extension VMEmployeesListVC{
 
 extension VMEmployeesListVC : UISearchResultsUpdating,UISearchControllerDelegate{
     
-    //clear the product array and call the api with the text in the searchTextField
     func updateSearchResults(for searchController: UISearchController) {
         
         if !searchController.isActive {
@@ -146,7 +145,7 @@ extension VMEmployeesListVC : UISearchResultsUpdating,UISearchControllerDelegate
             employeeListTable.reloadData()
         }else{
             if let text = searchController.searchBar.text, !text.isEmpty {
-                employeesArray = allEmployeesArray.filter { $0.firstName.lowercased().contains(text.lowercased()) }
+                employeesArray = allEmployeesArray.filter { $0.firstName.lowercased().contains(text.lowercased()) ||  $0.lastName.lowercased().contains(text.lowercased())}
                 employeeListTable.reloadData()
             }
         }

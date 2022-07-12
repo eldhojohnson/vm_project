@@ -62,13 +62,6 @@ class NetworkHelper: NSObject {
                     print(response.request as Any)  // original URL request
                     print(response.response as Any) // URL response
                     
-                    //handle success
-                    
-                    
-                    //handle error
-                    //handle expiry
-                    //
-                    
                     
                     if response.response?.statusCode == 503{
                         successCompletion(nil,true,false,false,true)
