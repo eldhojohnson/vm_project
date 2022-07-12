@@ -48,7 +48,7 @@ class VMEmployeesListVC: UIViewController {
         //when user click on the search button check whether resultSearchController is active or not ,if it is active move to the SearchControler with the search result
         if !resultSearchController.isActive {
             
-            searchVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "VMEmployeesListVC") as? VMEmployeesListVC
+            searchVC = VMStoryboards.main.instantiateViewController(withIdentifier: "VMEmployeesListVC") as? VMEmployeesListVC
             searchVC?.isFromSearch = true
             searchVC?.allEmployeesArray = allEmployeesArray
             self.resultSearchController = ({
@@ -104,18 +104,23 @@ extension VMEmployeesListVC{
             SVProgressHUD.dismiss()
             
             if isMaintenance{
-                print("isMaintenance")
+                VMUtilities.shared.showAlertWithTitle(title: VMTitles.error, andMessage: VMAlerts.server_is_under_maintenance, inView: self)
                 return
             }
             
             if isGoToLogin
             {
                 print("Login expired")
+                
                 return
             }
             
             if  isNetworkError{
-                print("No internet")
+                VMUtilities.shared.showAlertWithTwoFunctionality(message: VMAlerts.no_internet, title: VMTitles.error, view: self, buttonOneTitle: VMAlertButtons.cancel, fucntionOne: {
+                    
+                }, buttonTwoTitle: VMAlertButtons.try_again) {
+                    self.getEmployeesList()
+                }
                 return
                 
             }
@@ -123,6 +128,7 @@ extension VMEmployeesListVC{
             
             if let responseArray = data as? [[String : Any]]{
                 print(responseArray)
+                self.allEmployeesArray.removeAll()
                 for response in responseArray {
                     if let user = PeopleListModel(JSON: response){
                         self.allEmployeesArray.append(user)

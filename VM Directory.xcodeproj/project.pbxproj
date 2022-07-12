@@ -25,6 +25,10 @@
 		0ACDEBAB287B4E56008CBB0C /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACDEBAA287B4E56008CBB0C /* NetworkHelper.swift */; };
 		0ACDEBAD287BFF0D008CBB0C /* RoomsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACDEBAC287BFF0D008CBB0C /* RoomsModel.swift */; };
 		0ACDEBAF287C0273008CBB0C /* EmployeeDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACDEBAE287C0273008CBB0C /* EmployeeDetailsVC.swift */; };
+		0ADD0F78287D652800FBECE5 /* VMStoryboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADD0F77287D652800FBECE5 /* VMStoryboards.swift */; };
+		0ADD0F7B287D658E00FBECE5 /* VMLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADD0F7A287D658E00FBECE5 /* VMLabel.swift */; };
+		0ADD0F7F287D663500FBECE5 /* VMUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADD0F7E287D663500FBECE5 /* VMUtilities.swift */; };
+		0ADD0F81287D674D00FBECE5 /* VMAlerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADD0F80287D674D00FBECE5 /* VMAlerts.swift */; };
 		0AEC1EC0287C1FD500F6F971 /* WhiteNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEC1EBF287C1FD500F6F971 /* WhiteNavViewController.swift */; };
 		1B54A20A9CAE29E3098B7850 /* Pods_VM_Directory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7759617077A85F9EEE4FE880 /* Pods_VM_Directory.framework */; };
 		BE5A37387837CC38C5B86A38 /* Pods_VM_DirectoryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 516E18A36AD221F161B3C064 /* Pods_VM_DirectoryTests.framework */; };
@@ -72,6 +76,10 @@
 		0ACDEBAA287B4E56008CBB0C /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		0ACDEBAC287BFF0D008CBB0C /* RoomsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsModel.swift; sourceTree = "<group>"; };
 		0ACDEBAE287C0273008CBB0C /* EmployeeDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDetailsVC.swift; sourceTree = "<group>"; };
+		0ADD0F77287D652800FBECE5 /* VMStoryboards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMStoryboards.swift; sourceTree = "<group>"; };
+		0ADD0F7A287D658E00FBECE5 /* VMLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMLabel.swift; sourceTree = "<group>"; };
+		0ADD0F7E287D663500FBECE5 /* VMUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMUtilities.swift; sourceTree = "<group>"; };
+		0ADD0F80287D674D00FBECE5 /* VMAlerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMAlerts.swift; sourceTree = "<group>"; };
 		0AEC1EBF287C1FD500F6F971 /* WhiteNavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteNavViewController.swift; sourceTree = "<group>"; };
 		1107622E18F6F9ADEBC46854 /* Pods-VM DirectoryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VM DirectoryTests.release.xcconfig"; path = "Target Support Files/Pods-VM DirectoryTests/Pods-VM DirectoryTests.release.xcconfig"; sourceTree = "<group>"; };
 		16D3293FED664888FC20E305 /* Pods-VM Directory-VM DirectoryUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VM Directory-VM DirectoryUITests.release.xcconfig"; path = "Target Support Files/Pods-VM Directory-VM DirectoryUITests/Pods-VM Directory-VM DirectoryUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -136,6 +144,8 @@
 		0ACDEB5F287A8274008CBB0C /* VM Directory */ = {
 			isa = PBXGroup;
 			children = (
+				0ADD0F7D287D662600FBECE5 /* Utilities */,
+				0ADD0F79287D658000FBECE5 /* UIComponents */,
 				0ACDEB9B287A8302008CBB0C /* Storyboards */,
 				0ACDEB96287A82CF008CBB0C /* Controllers */,
 				0ACDEBA0287A8630008CBB0C /* Views */,
@@ -192,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				0ACDEB66287A8274008CBB0C /* Main.storyboard */,
+				0ADD0F77287D652800FBECE5 /* VMStoryboards.swift */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -212,6 +223,23 @@
 				0ACDEBA3287A872B008CBB0C /* VMRoomsListTCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		0ADD0F79287D658000FBECE5 /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				0ADD0F7A287D658E00FBECE5 /* VMLabel.swift */,
+			);
+			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		0ADD0F7D287D662600FBECE5 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				0ADD0F7E287D663500FBECE5 /* VMUtilities.swift */,
+				0ADD0F80287D674D00FBECE5 /* VMAlerts.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		38825398252B5FF21801F07D /* Frameworks */ = {
@@ -479,6 +507,8 @@
 				0ACDEBA7287B4993008CBB0C /* VMURLs.swift in Sources */,
 				0ACDEB6B287A8274008CBB0C /* VM_Directory.xcdatamodeld in Sources */,
 				0AEC1EC0287C1FD500F6F971 /* WhiteNavViewController.swift in Sources */,
+				0ADD0F7B287D658E00FBECE5 /* VMLabel.swift in Sources */,
+				0ADD0F81287D674D00FBECE5 /* VMAlerts.swift in Sources */,
 				0ACDEBAB287B4E56008CBB0C /* NetworkHelper.swift in Sources */,
 				0ACDEB9D287A837D008CBB0C /* VMRoomsListVC.swift in Sources */,
 				0ACDEB98287A82ED008CBB0C /* VMEmployeesListVC.swift in Sources */,
@@ -486,7 +516,9 @@
 				0ACDEBA4287A872B008CBB0C /* VMRoomsListTCell.swift in Sources */,
 				0ACDEB61287A8274008CBB0C /* AppDelegate.swift in Sources */,
 				0ACDEB95287A82CA008CBB0C /* VMWebServices.swift in Sources */,
+				0ADD0F7F287D663500FBECE5 /* VMUtilities.swift in Sources */,
 				0ACDEBAF287C0273008CBB0C /* EmployeeDetailsVC.swift in Sources */,
+				0ADD0F78287D652800FBECE5 /* VMStoryboards.swift in Sources */,
 				0ACDEBA9287B4C4B008CBB0C /* PeopleListModel.swift in Sources */,
 				0ACDEBA2287A8715008CBB0C /* VMEmployeesListTCell.swift in Sources */,
 			);

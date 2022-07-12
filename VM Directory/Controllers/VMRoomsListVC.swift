@@ -79,18 +79,23 @@ extension VMRoomsListVC{
             SVProgressHUD.dismiss()
             
             if isMaintenance{
-                print("isMaintenance")
+                VMUtilities.shared.showAlertWithTitle(title: VMTitles.error, andMessage: VMAlerts.server_is_under_maintenance, inView: self)
                 return
             }
             
             if isGoToLogin
             {
                 print("Login expired")
+                
                 return
             }
             
             if  isNetworkError{
-                print("No internet")
+                VMUtilities.shared.showAlertWithTwoFunctionality(message: VMAlerts.no_internet, title: VMTitles.error, view: self, buttonOneTitle: VMAlertButtons.cancel, fucntionOne: {
+                    
+                }, buttonTwoTitle: VMAlertButtons.try_again) {
+                    self.getRoomsList()
+                }
                 return
                 
             }
