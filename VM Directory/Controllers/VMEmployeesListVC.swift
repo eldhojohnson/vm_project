@@ -7,6 +7,7 @@
 
 import UIKit
 import SVProgressHUD
+import Kingfisher
 
 class VMEmployeesListVC: UIViewController {
 
@@ -83,7 +84,8 @@ extension VMEmployeesListVC : UITableViewDataSource, UITableViewDelegate{
         
         let data = employeesArray[indexPath.row]
         cell.employeeNameLabel.text = data.firstName + " " + data.lastName
-        
+        cell.profilePicImageView.kf.setImage(with: URL(string: data.avatar ?? ""), placeholder: UIImage(named: "avatar"))
+
         return cell
     }
     

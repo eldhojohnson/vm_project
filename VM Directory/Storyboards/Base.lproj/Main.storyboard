@@ -31,8 +31,15 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pai-Py-GsQ">
                                                     <rect key="frame" x="0.0" y="0.0" width="373.5" height="60.5"/>
                                                     <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RxI-VB-QxZ">
+                                                            <rect key="frame" x="16" y="10.5" width="40" height="40"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="40" id="Sl0-tB-3SN"/>
+                                                                <constraint firstAttribute="width" constant="40" id="kVY-F9-4MK"/>
+                                                            </constraints>
+                                                        </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0vw-Ls-S2O" customClass="VMCustomLabel" customModule="VM_Directory" customModuleProvider="target">
-                                                            <rect key="frame" x="20" y="20" width="333.5" height="20.5"/>
+                                                            <rect key="frame" x="72" y="20" width="281.5" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -41,8 +48,11 @@
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
                                                         <constraint firstItem="0vw-Ls-S2O" firstAttribute="top" secondItem="Pai-Py-GsQ" secondAttribute="top" constant="20" id="0Gk-Sb-cZ8"/>
-                                                        <constraint firstItem="0vw-Ls-S2O" firstAttribute="leading" secondItem="Pai-Py-GsQ" secondAttribute="leading" constant="20" id="PD9-f1-2TW"/>
+                                                        <constraint firstItem="0vw-Ls-S2O" firstAttribute="leading" secondItem="RxI-VB-QxZ" secondAttribute="trailing" constant="16" id="KEo-ND-4KU"/>
+                                                        <constraint firstItem="RxI-VB-QxZ" firstAttribute="leading" secondItem="Pai-Py-GsQ" secondAttribute="leading" constant="16" id="Qk7-IY-jdY"/>
+                                                        <constraint firstItem="0vw-Ls-S2O" firstAttribute="centerY" secondItem="RxI-VB-QxZ" secondAttribute="centerY" id="Tnd-FP-bVf"/>
                                                         <constraint firstAttribute="trailing" secondItem="0vw-Ls-S2O" secondAttribute="trailing" constant="20" id="hjP-2H-C61"/>
+                                                        <constraint firstItem="RxI-VB-QxZ" firstAttribute="centerY" secondItem="Pai-Py-GsQ" secondAttribute="centerY" id="nwo-dp-l0l"/>
                                                         <constraint firstAttribute="bottom" secondItem="0vw-Ls-S2O" secondAttribute="bottom" constant="20" id="oYP-lv-cHg"/>
                                                     </constraints>
                                                 </view>
@@ -57,6 +67,7 @@
                                         <color key="tintColor" systemColor="labelColor"/>
                                         <connections>
                                             <outlet property="employeeNameLabel" destination="0vw-Ls-S2O" id="54g-X2-LFM"/>
+                                            <outlet property="profilePicImageView" destination="RxI-VB-QxZ" id="yBO-ZU-utv"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -266,7 +277,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="availabilityIndicatorView" destination="alE-KV-jYV" id="wGj-4G-Dcy"/>
-                                            <outlet property="maxOccupencyLabel" destination="il3-0H-jG7" id="6IR-dV-HGG"/>
+                                            <outlet property="maxOccupencyLabel" destination="nzA-9R-ytS" id="n47-qh-jNE"/>
                                             <outlet property="roomIdLabel" destination="x8m-5k-cbJ" id="H0P-50-PQr"/>
                                             <outlet property="roomStatusLabel" destination="il3-0H-jG7" id="k5I-D0-GXS"/>
                                         </connections>
